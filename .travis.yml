@@ -1,9 +1,16 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: s/WPH/Q0YYlQ9NTj2vRRgFVls5wt0wQ4siEGgqeNJjJbHf73xQIbLiXfkM5c3yLmAnjpH820/krx0REGAQsEKWTr587dLyUgeXmqHDt+7TElFzJ0NZF/yeGUBGB/oxow5IUIL65U+xyiU6HHTJWMTLYf45i5CskWztvlCNK/ScSlxmDoPnknS2lwvRVTLDtq1ZInyKPmeqWkFxpmaHVM/WqS6lYe3x0dIAZ1OWU6NHbV4ISGr6ccMxNo8fl6NCQzPl0xCBWZ+AoT3bxVoS5TQEmzDD8zjNKw8gVvBFGVylM+W9rKCmiQqXoHbyY9vD4QZEzX3L0jNfv94VH9FXRAKZYz+twZd3eJCP8SNcEnfSKN4L/MnqBvqU6oUAD0esSUQJSufROhISSL+5OMj89ia0GW+UhL3p+h0tOl2BUiI+LNnnnQup5MiQpMA9Au4glSHay+zbxO2ZVFBqi5AQNkpXLcQQF1PuWiHjsx7ZQaukQlkGdEtACJxhOjT8k1VfBlMX+1aHCHecimHrPMbkxZZ5jPzG9D7XAqdneE/XvlLqxluNAe1aq3KmQyr8yRpdmULM7kgKwob9WI290x/VtNVUkRzA2CesS9aRAbsdC6msozh9Xp04/ey4hg9nLwW+4xqq8ZUDWfsSUW5CwFpYkZAdw3KvZvZ4n9ZVA/RDgBnPA=
+  app: sheltered-brook-42316
+  on:
+    repo: levik666/notebook
